@@ -36,13 +36,16 @@ public class Task06 {
     }
 
     public static boolean elementosRepetidos(double[] input) {
-
-        for (int i=0; i < input.length - 1; i++){
-            for (int j = i+1; j < input.length; j++){
+        int i = 0;
+        while(i < input.length - 1){
+            int j = i+1;
+            while(j < input.length){
                 if (input[i] == input[j]){
                     return true;
                 }
+                j++;
             }
+            i++;
         }
         return false;
     }
