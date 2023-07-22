@@ -31,8 +31,11 @@ public class Task01 {
     }
 
     public static void validateQuantity(int quantity) throws InvalidQuantityException {
-        if (quantity <= 0 ){
-            throw new InvalidQuantityException();
+        if (quantity == 0 ){
+            throw new InvalidQuantityException("Quantity cannot be 0.");
+        }
+        if (quantity < 0){
+            throw new InvalidQuantityException("Quantity cannot be negative.");
         }
     }
 }
