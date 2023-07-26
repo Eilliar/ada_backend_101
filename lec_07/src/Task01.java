@@ -16,15 +16,15 @@ enum WeekdayENUM {
         return keywords;
     }
 
-    public static WeekdayENUM fromString(String weekDay) {
-        for (WeekdayENUM keywords : WeekdayENUM.values()) {
-            for(String keyword: keywords.getKeywords()){
-                if (keyword.equalsIgnoreCase(weekDay)) {
-                    return keywords;
+    public static WeekdayENUM fromString(String inputWeekDay) {
+        for (WeekdayENUM weekday : WeekdayENUM.values()) {
+            for(String keyword: weekday.getKeywords()){
+                if (keyword.equalsIgnoreCase(inputWeekDay)) {
+                    return weekday;
                 }
             }
         }
-        throw new IllegalArgumentException("Invalid input string: " + weekDay);
+        throw new IllegalArgumentException("Invalid input string: " + inputWeekDay);
     }
 }
 
