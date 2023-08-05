@@ -35,8 +35,7 @@ public class Bank {
         }
         for(Account account: this.accounts){
             if(account.id.equals(accountId)){
-                account.deposit(value);
-                return true;
+                return account.deposit(value);
             }
         }
         return false;
@@ -48,8 +47,7 @@ public class Bank {
         }
         for(Account account: this.accounts) {
             if (account.id.equals(accountId)) {
-                account.withdraw(value);
-                return true;
+                return account.withdraw(value);
             }
         }
         return false;

@@ -10,19 +10,20 @@ public class Account {
         this.balance = 0;
     }
 
-    public void deposit(double value){
+    public boolean deposit(double value){
         if(value >= 0){
             this.balance += value;
+            return true;
         }
+        return  false;
     }
 
-    public void withdraw(double value){
+    public boolean withdraw(double value){
         if(this.balance > value && value >= 0){
             this.balance -= value;
+            return true;
         }
-        else{
-            System.out.println("Not enough balance to withdraw.");
-        }
+        return false;
     }
 
     public boolean equals(Object obj){
