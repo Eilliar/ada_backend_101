@@ -18,6 +18,6 @@ Essa classe deve ter um construtor para inicializar o cliente e o número da con
 
 Por fim, crie uma classe Banco que gerencie um conjunto de Conta. Ela deve ter um método criarConta() que crie uma nova conta e a adicione ao conjunto, um método buscarConta() que retorne uma conta dado o seu número, um método depositar() que receba o número de uma conta e uma quantia, e faça o depósito nessa conta, e um método sacar() que faça o saque de uma conta.
 
-Parte 4: Teste
+## Parte 4: Teste
 
 Crie uma classe TesteBanco com um método main(), que imprime um menu, para que o usuário possa executar operações como criar conta, depositar, sacar e exibir os dados de uma conta. Para isso, você pode usar a classe Scanner para ler as opções do usuário e os dados necessários para cada operação.
