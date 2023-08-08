@@ -1,6 +1,6 @@
 public class Bank {
 
-    Account[] accounts;
+    Account[] accounts = new Account[] {};
     public void createAccount(String name, String cpf, String email, String id){
         Client client = new Client(name, cpf, email);
         Account account = new Account(client, id);
@@ -29,7 +29,7 @@ public class Bank {
         return null;
     }
 
-    public boolean depositToAccount(String accountId, float value){
+    public boolean depositToAccount(String accountId, double value){
         if(this.accounts.length < 1){
             return false;
         }
@@ -41,7 +41,7 @@ public class Bank {
         return false;
     }
 
-    public boolean withdrawFromAccount(String accountId, float value){
+    public boolean withdrawFromAccount(String accountId, double value){
         if(this.accounts.length < 1){
             return false;
         }
