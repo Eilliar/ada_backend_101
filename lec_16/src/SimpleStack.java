@@ -15,7 +15,7 @@ public class SimpleStack extends  Stack{
 
     Object Peek(){
         return this.objects.get(this.objects.size() -1);
-    }
+    }1
 
     @Override
     void PrintElements(){
