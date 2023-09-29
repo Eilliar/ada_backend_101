@@ -8,6 +8,11 @@ public class User {
     private Optional<String> email;
     private Optional<Integer> age;
 
+    private Function<Integer, String> ageValidation = x -> {
+        if (x == 0) return "Information not available";
+        else return String.valueOf(x);
+    };
+
     public User(String userName, String password) {
         this.userName = userName;
         this.password = password;
@@ -55,11 +60,6 @@ public class User {
     }
 
     void showDetails(){
-
-        Function<Integer, String> ageValidation = x -> {
-            if (x == 0) return "Information not available";
-            else return String.valueOf(x);
-        };
 
         System.out.printf("\nUser name: %s\tUser email: %s\tUser age: %s",
                 this.userName,
